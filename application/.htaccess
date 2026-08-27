@@ -1,0 +1,39 @@
+<IfModule authz_core_module>
+    Require all denied
+</IfModule>
+<IfModule !authz_core_module>
+    Deny from all
+</IfModule>
+
+# File .htaccess untuk folder uploads
+# Letakkan file ini di dalam folder uploads/
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Izinkan akses ke file gambar
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteCond %{REQUEST_FILENAME} \.(jpg|jpeg|png|gif)$ [NC]
+    RewriteRule . - [L]
+    
+    # Blokir akses ke file lain
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !\.(jpg|jpeg|png|gif)$ [NC]
+    RewriteRule . - [F,L]
+</IfModule>
+
+# Pengaturan keamanan tambahan
+<Files "*.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Mencegah listing direktori
+Options -Indexes
+
+# Pengaturan MIME type untuk gambar
+<IfModule mod_mime.c>
+    AddType image/jpeg jpg jpeg
+    AddType image/png png
+    AddType image/gif gif
+</IfModule>

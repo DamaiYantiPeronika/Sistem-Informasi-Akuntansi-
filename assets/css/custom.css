@@ -1,0 +1,125 @@
+/* --- Navbar --- */
+.navbar-nav .nav-link {
+    color: #4e4e4e;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+/* Profile Image di Navbar */
+.img-profile {
+    border: 2px solid #f8f9fa;
+    object-fit: cover;
+}
+
+/* --- Sidebar --- */
+.main-sidebar {
+    background-color: #343a40;
+}
+
+.brand-link {
+    border-bottom: 1px solid #4b545c;
+}
+
+.brand-link .brand-image {
+    max-height: 35px;
+}
+
+/* Sidebar Links */
+.nav-sidebar>.nav-item>.nav-link {
+    color: #c2c7d0;
+}
+
+.nav-sidebar>.nav-item>.nav-link.active {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.nav-sidebar .nav-treeview>.nav-item>.nav-link {
+    padding-left: 30px;
+    color: #adb5bd;
+}
+
+.nav-sidebar .nav-treeview>.nav-item>.nav-link.active {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+/* Icon di Sidebar */
+.nav-sidebar .nav-icon {
+    margin-right: 5px;
+}
+
+/* Sidebar Hover */
+.nav-sidebar>.nav-item>.nav-link:hover {
+    background-color: #495057;
+    color: #ffffff;
+}
+
+.nav-sidebar .nav-treeview>.nav-item>.nav-link:hover {
+    background-color: #495057;
+    color: #ffffff;
+}
+
+/* --- Dropdown User Menu --- */
+.dropdown-menu-right {
+    min-width: 180px;
+    font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* --- Content Header (judul halaman) --- */
+.content-header h1 {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .img-profile {
+        height: 25px;
+        width: 25px;
+    }
+
+    .navbar-nav .nav-link span {
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Push Menu --- */
+.sidebar-collapse .main-sidebar {
+    width: 80px;
+}
+
+.sidebar-collapse .main-sidebar .brand-text {
+    display: none;
+}
+
+.sidebar-collapse .main-sidebar .nav-link p {
+    display: none;
+}
+
+/* Smooth animation untuk sidebar open/close */
+.main-sidebar,
+.content-wrapper {
+    min-height: 100vh;
+    padding-top: 0px;
+}
+
+.content {
+    padding: 0px;
+}
+
+.content-header {
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.card {
+    margin-top: 0px;
+}
